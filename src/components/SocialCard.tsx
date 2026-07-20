@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRightIcon, BoxIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 interface Ripple {
   id: number;
   x: number;
@@ -10,9 +10,7 @@ export interface SocialCardData {
   name: string;
   description: string;
   href: string;
-  Icon: BoxIcon | React.FC<{
-    className?: string;
-  }>;
+  logo: string;
 }
 const cardVariants = {
   hidden: {
@@ -34,7 +32,7 @@ export function SocialCard({
   name,
   description,
   href,
-  Icon
+  logo
 }: SocialCardData) {
   const [ripples, setRipples] = useState<Ripple[]>([]);
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -77,17 +75,15 @@ export function SocialCard({
     }} aria-hidden="true" />)}
 
       <div className="relative z-10">
-        <motion.div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#e10600]/10 text-[#e10600] ring-1 ring-[#e10600]/30 transition-colors group-hover:bg-[#e10600]/20" whileHover={{
+        <motion.div className="mb-6 inline-flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl" whileHover={{
         rotate: 8,
         scale: 1.05
       }} transition={{
         type: 'spring',
         stiffness: 300,
         damping: 15
-      }} style={{
-        boxShadow: '0 0 25px rgba(225,6,0,0.25)'
       }}>
-          <Icon className="h-8 w-8" />
+          <img src={logo} alt={`${name} logo`} className="h-full w-full object-contain" />
         </motion.div>
 
         <h3 className="font-display text-2xl font-extrabold text-white">{name}</h3>

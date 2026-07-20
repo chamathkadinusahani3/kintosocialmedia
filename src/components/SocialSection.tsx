@@ -4,35 +4,33 @@
 
 import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from 'lucide-react';
 import { SocialCard, type SocialCardData } from './SocialCard';
 import { SectionHeading } from './SectionHeading';
-import { TikTokIcon } from './icons/TikTokIcon';
 
 const cards: SocialCardData[] = [
 {
   name: 'Facebook',
   description: 'Latest promotions, customer stories, tyre tips, and company updates.',
   href: 'https://www.facebook.com/share/1EkBXKBqzX/?mibextid=wwXIfr',
-  Icon: FacebookIcon
+  logo: '/Facebook.png'
 },
 {
   name: 'Instagram',
   description: 'Premium tyre photography, reels, behind-the-scenes, and offers.',
   href: 'https://www.instagram.com/kintotyres_srilanka?igsh=MXdid3BjZDlnemFnNA==',
-  Icon: InstagramIcon
+  logo: '/instagram.png'
 },
 {
   name: 'TikTok',
   description: 'Fun tyre content, street interviews, educational videos, and viral reels.',
   href: 'https://www.tiktok.com/@kinto.tyres.sri.lanka?_r=1&_t=ZS-98Bf6In6Boj',
-  Icon: TikTokIcon
+  logo: '/tiktok.jpg'
 },
 {
   name: 'YouTube',
   description: 'Product reviews, installation guides, customer experiences, and educational videos.',
   href: 'https://youtube.com/@kintotyreslanka?si=wpr1GyIca3pe-6vh',
-  Icon: YoutubeIcon
+  logo: '/Youtube_logo.png'
 }];
 
 

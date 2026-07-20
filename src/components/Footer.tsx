@@ -5,16 +5,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from 'lucide-react';
-import { TikTokIcon } from './icons/TikTokIcon';
 
 const LOGO = '/kintologo.webp';
 
 const socials = [
-{ name: 'Facebook', href: 'https://www.facebook.com/share/1EkBXKBqzX/?mibextid=wwXIfr', Icon: FacebookIcon },
-{ name: 'Instagram', href: 'https://www.instagram.com/kintotyres_srilanka?igsh=MXdid3BjZDlnemFnNA==', Icon: InstagramIcon },
-{ name: 'TikTok', href: 'https://www.tiktok.com/@kinto.tyres.sri.lanka?_r=1&_t=ZS-98Bf6In6Boj', Icon: TikTokIcon },
-{ name: 'YouTube', href: 'https://youtube.com/@kintotyreslanka?si=wpr1GyIca3pe-6vh', Icon: YoutubeIcon }];
+{ name: 'Facebook', href: 'https://www.facebook.com/share/1EkBXKBqzX/?mibextid=wwXIfr', logo: '/Facebook.png' },
+{ name: 'Instagram', href: 'https://www.instagram.com/kintotyres_srilanka?igsh=MXdid3BjZDlnemFnNA==', logo: '/instagram.png' },
+{ name: 'TikTok', href: 'https://www.tiktok.com/@kinto.tyres.sri.lanka?_r=1&_t=ZS-98Bf6In6Boj', logo: '/tiktok.jpg' },
+{ name: 'YouTube', href: 'https://youtube.com/@kintotyreslanka?si=wpr1GyIca3pe-6vh', logo: '/Youtube_logo.png' }];
 
 
 export function Footer() {
@@ -33,7 +31,7 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-4">
-          {socials.map(({ name, href, Icon }) =>
+          {socials.map(({ name, href, logo }) =>
           <motion.a
             key={name}
             href={href}
@@ -42,9 +40,9 @@ export function Footer() {
             aria-label={name}
             whileHover={{ y: -4, scale: 1.1 }}
             whileTap={{ scale: 0.92 }}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-[#e10600]/60 hover:text-[#e10600]">
-            
-              <Icon className="h-5 w-5" />
+            className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white p-2 transition-colors hover:border-[#e10600]/60">
+
+              <img src={logo} alt={name} className="h-full w-full object-contain" />
             </motion.a>
           )}
         </div>
