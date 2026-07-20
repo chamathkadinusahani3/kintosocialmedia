@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const LOGO = '/kintologo.webp';
+
 interface LoaderProps {
   visible: boolean;
 }
@@ -22,8 +24,10 @@ export function Loader({ visible }: LoaderProps) {
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
             style={{ boxShadow: '0 0 40px rgba(225,6,0,0.35)' }} />
-          
-            <div className="absolute h-14 w-14 rounded-full bg-[#0d0d0d] shadow-[inset_0_0_20px_rgba(225,6,0,0.4)]" />
+
+            <div className="absolute flex h-14 w-14 items-center justify-center rounded-full bg-[#0d0d0d] shadow-[inset_0_0_20px_rgba(225,6,0,0.4)]">
+              <img src={LOGO} alt="KINTO" className="h-9 w-9 object-contain" />
+            </div>
           </div>
           <motion.p
           className="font-display mt-8 text-sm font-bold uppercase tracking-[0.5em] text-white/70"

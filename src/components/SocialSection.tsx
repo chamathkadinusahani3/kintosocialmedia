@@ -13,25 +13,25 @@ const cards: SocialCardData[] = [
 {
   name: 'Facebook',
   description: 'Latest promotions, customer stories, tyre tips, and company updates.',
-  href: 'https://facebook.com',
+  href: 'https://www.facebook.com/share/1EkBXKBqzX/?mibextid=wwXIfr',
   Icon: FacebookIcon
 },
 {
   name: 'Instagram',
   description: 'Premium tyre photography, reels, behind-the-scenes, and offers.',
-  href: 'https://instagram.com',
+  href: 'https://www.instagram.com/kintotyres_srilanka?igsh=MXdid3BjZDlnemFnNA==',
   Icon: InstagramIcon
 },
 {
   name: 'TikTok',
   description: 'Fun tyre content, street interviews, educational videos, and viral reels.',
-  href: 'https://tiktok.com',
+  href: 'https://www.tiktok.com/@kinto.tyres.sri.lanka?_r=1&_t=ZS-98Bf6In6Boj',
   Icon: TikTokIcon
 },
 {
   name: 'YouTube',
   description: 'Product reviews, installation guides, customer experiences, and educational videos.',
-  href: 'https://youtube.com',
+  href: 'https://youtube.com/@kintotyreslanka?si=wpr1GyIca3pe-6vh',
   Icon: YoutubeIcon
 }];
 

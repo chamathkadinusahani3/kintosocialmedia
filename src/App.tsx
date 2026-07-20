@@ -3,6 +3,7 @@ import { Loader } from './components/Loader';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { CursorGlow } from './components/CursorGlow';
 import { ScrollProgress } from './components/ScrollProgress';
+import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SocialSection } from './components/SocialSection';
 import { Footer } from './components/Footer';
@@ -26,6 +27,7 @@ export function App() {
       <ScrollProgress />
       <AnimatedBackground />
       <CursorGlow />
+      <Navbar />
 
       <main className="relative z-10">
         <Hero onExplore={scrollToSocial} />

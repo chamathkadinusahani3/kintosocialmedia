@@ -9,6 +9,7 @@ import { ChevronDownIcon } from 'lucide-react';
 import { GlowButton } from './GlowButton';
 
 const HERO_BG = "/05612ba2-d038-49ed-a639-cdb5528ed5ee.jpg";
+const LOGO = "/kintologo.webp";
 
 interface HeroProps {
   onExplore: () => void;
@@ -40,8 +41,8 @@ export function Hero({ onExplore }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#e10600]/40 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-white/80 backdrop-blur-md">
-          
-          <span className="h-1.5 w-1.5 rounded-full bg-[#e10600] shadow-[0_0_8px_#e10600]" />
+
+          <img src={LOGO} alt="" className="h-4 w-4 object-contain" />
           KINTO Tyres
         </motion.div>
 
