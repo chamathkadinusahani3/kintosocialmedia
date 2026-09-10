@@ -6,6 +6,7 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SocialSection } from './components/SocialSection';
+import { GrandDrawSection } from './components/GrandDrawSection';
 import { Footer } from './components/Footer';
 
 export function App() {
@@ -32,6 +33,7 @@ export function App() {
       <main className="relative z-10">
         <Hero onExplore={scrollToSocial} />
         <SocialSection ref={socialRef} />
+        <GrandDrawSection />
       </main>
 
       <Footer />
